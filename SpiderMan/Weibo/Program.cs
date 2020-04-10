@@ -1,13 +1,12 @@
 ﻿using Newtonsoft.Json;
-using SpiderMan.Model;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Threading;
+using System.Text;
 using System.Threading.Tasks;
+using Weibo.Model;
 
-namespace SpiderMan
+namespace Weibo
 {
     class Program
     {
@@ -17,11 +16,14 @@ namespace SpiderMan
         {
             Task.Run(async () =>
             {
+                Console.WriteLine("请输入用户Id:");
                 uid = Console.ReadLine();
+                uid = uid.Trim();
                 Console.WriteLine("下载开始:");
                 await Run();
             }).Wait();
 
+            Console.WriteLine("下载结束，按任意键退出");
             Console.Read();
         }
 
@@ -48,7 +50,9 @@ namespace SpiderMan
             var cards = JsonConvert.DeserializeObject<WBPage>(cardres);
 
             int total = cards.Data.CardlistInfo.Total;
-            string username = cards.Data.Cards.FirstOrDefault().MBlog.User.UserName;
+            //cards中MBlog可能为空
+            string username = cards.Data.Cards.Where(e => e.MBlog != null && e.MBlog.User != null && e.MBlog.User.UserName != null)
+            .FirstOrDefault().MBlog.User.UserName;
             int pages = total % 10 != 0 ? (total / 10 + 1) : (total / 10);
 
             for (int i = 1; i <= pages; i++)
@@ -87,7 +91,8 @@ namespace SpiderMan
                     }
                 }
             }
-            await client.DownloadImg(imgUrls, $"D://photo//{username}");
+            var root = System.Environment.CurrentDirectory;
+            await client.DownloadImg(imgUrls, $"{root}//{username}//{pageIdnex}");
         }
     }
 }

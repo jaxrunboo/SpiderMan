@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiderMan", "SpiderMan\SpiderMan.csproj", "{E6AEF7C1-6162-4BEB-895F-5C9680D864F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weibo", "Weibo\Weibo.csproj", "{9E96FF00-84B9-4ACA-855C-64A17EB58E61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E6AEF7C1-6162-4BEB-895F-5C9680D864F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6AEF7C1-6162-4BEB-895F-5C9680D864F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6AEF7C1-6162-4BEB-895F-5C9680D864F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6AEF7C1-6162-4BEB-895F-5C9680D864F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E96FF00-84B9-4ACA-855C-64A17EB58E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E96FF00-84B9-4ACA-855C-64A17EB58E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E96FF00-84B9-4ACA-855C-64A17EB58E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E96FF00-84B9-4ACA-855C-64A17EB58E61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

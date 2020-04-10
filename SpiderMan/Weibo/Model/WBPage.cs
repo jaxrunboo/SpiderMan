@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SpiderMan.Model
+namespace Weibo.Model
 {
     public class WBPage: WBBase<WBPageData>
     {
